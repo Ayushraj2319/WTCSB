@@ -1,26 +1,17 @@
-// (function show(){
-//     console.log("Welcome to CSB");
-// })();
-// const show = () =>{
-//     console.log('Welcome ');
-// };
-//show();
-// (() => {
-//     console.log("Welcome");
-// })();
-function person() {
-    this.age=24;
 
-    setTimeout(function (){
-        console.log(this.age);
-    },1000);
-}
-//node funew person();
-function person() {
-    this.age=24;
+const aa= () => { return { user: "name"}};
+console.log(aa());
+ 
+const bb= () => [1,2,3,4,5,6];
+console.log(bb());
 
-    setTimeout( ()=>{
-        console.log(this.age);
-    },1000);
-}
-new person();
+const user ={
+    name : "aj" ,age: 22,
+    welcome: function () {
+        console.log(`hello ${this.name}`);
+        console.log(this);
+    }
+};
+user.welcome();
+// user.name ="ajay";
+// user.welcome();
